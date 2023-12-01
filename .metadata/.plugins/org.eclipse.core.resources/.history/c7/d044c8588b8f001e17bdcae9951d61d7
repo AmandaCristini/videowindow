@@ -1,0 +1,18 @@
+package com.example.videowindowproj.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/calculadora")
+public class CalculadoraController {
+
+	// calculadora/somar/10/20
+	// calculadora/somar?10&20
+	
+	@GetMapping("/somar/{a}/{b}")
+	public Integer somar(int a, int b) {
+		return a + b;
+	}
+}

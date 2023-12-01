@@ -1,0 +1,5 @@
+package com.example.videowindowproj.models;
+
+public class Cliente {
+
+}

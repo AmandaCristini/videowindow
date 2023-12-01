@@ -1,0 +1,23 @@
+package com.example.videowindowproj.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.videowindowproj.models.Cliente;
+
+@RestController
+@RequestMapping("/clientes")
+public class ClienteController {
+
+	@GetMapping("/qualquer")
+	public Cliente obterCliente() {
+		return new Cliente(25, "Amanda Rosa", "555.247.236-54");
+	}
+	
+	@GetMapping("/{id}")
+	public Cliente obterClientePorId(@PathVariable int id) {
+		return new Cliente(id, "Maria", "574.577.746-78");
+	}
+}
